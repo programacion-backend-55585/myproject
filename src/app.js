@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGO_URL, {
 app.use(express.json());
 app.use(cookieParser());
 
+app.get('/',(req,res)=>{
+    res.send('<h1>Hello World from Coderhouse 555 🤘🔥🔥</h1>');
+})
+
 app.use('/api/users',usersRouter);
 app.use('/api/pets',petsRouter);
 app.use('/api/adoptions',adoptionsRouter);
